@@ -9,13 +9,16 @@ namespace HelloWorld
         public HelloWorldForm()
         {
             InitializeComponent();
-
-            MessageBox.Show("Hello Constructor");
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello world");
+        }
+
+        private void HelloWorldForm_Shown(object sender, EventArgs e)
+        {
+            MessageBox.Show("Form Shown");
         }
     }
 }

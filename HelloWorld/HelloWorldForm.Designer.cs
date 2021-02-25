@@ -34,6 +34,9 @@ namespace HelloWorld
             // 
             // button1
             // 
+            this.structuresExtender.SetAttributeName(this.button1, null);
+            this.structuresExtender.SetAttributeTypeName(this.button1, null);
+            this.structuresExtender.SetBindPropertyName(this.button1, null);
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -42,14 +45,18 @@ namespace HelloWorld
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // HelloWorldForm
             // 
+            this.structuresExtender.SetAttributeName(this, null);
+            this.structuresExtender.SetAttributeTypeName(this, null);
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.structuresExtender.SetBindPropertyName(this, null);
             this.ClientSize = new System.Drawing.Size(269, 227);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "HelloWorldForm";
             this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.HelloWorldForm_Shown);
             this.ResumeLayout(false);
 
         }
