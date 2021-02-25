@@ -6,11 +6,22 @@ namespace HelloWorld
 {
     public partial class HelloWorldForm : PluginFormBase
     {
+        private static bool _started = false;
+
         public HelloWorldForm()
         {
+            if (!_started)
+            {
+                _started = true;
+                return;
+            }
+
             InitializeComponent();
 
-            MessageBox.Show("Hello Constructor");
+            if (_started)
+            {
+                MessageBox.Show("Hello Constructor");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
