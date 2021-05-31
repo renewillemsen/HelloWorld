@@ -30,10 +30,14 @@ namespace HelloWorld
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
+            this.btnSqlite = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
+            this.structuresExtender.SetAttributeName(this.button1, null);
+            this.structuresExtender.SetAttributeTypeName(this.button1, null);
+            this.structuresExtender.SetBindPropertyName(this.button1, null);
             this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -42,13 +46,30 @@ namespace HelloWorld
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // btnSqlite
             // 
+            this.structuresExtender.SetAttributeName(this.btnSqlite, null);
+            this.structuresExtender.SetAttributeTypeName(this.btnSqlite, null);
+            this.structuresExtender.SetBindPropertyName(this.btnSqlite, null);
+            this.btnSqlite.Location = new System.Drawing.Point(12, 41);
+            this.btnSqlite.Name = "btnSqlite";
+            this.btnSqlite.Size = new System.Drawing.Size(75, 23);
+            this.btnSqlite.TabIndex = 1;
+            this.btnSqlite.Text = "SQLite";
+            this.btnSqlite.UseVisualStyleBackColor = true;
+            this.btnSqlite.Click += new System.EventHandler(this.btnSqlite_Click);
+            // 
+            // HelloWorldForm
+            // 
+            this.structuresExtender.SetAttributeName(this, null);
+            this.structuresExtender.SetAttributeTypeName(this, null);
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.structuresExtender.SetBindPropertyName(this, null);
             this.ClientSize = new System.Drawing.Size(269, 227);
+            this.Controls.Add(this.btnSqlite);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "HelloWorldForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
@@ -57,6 +78,7 @@ namespace HelloWorld
         #endregion
 
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSqlite;
     }
 }
 
