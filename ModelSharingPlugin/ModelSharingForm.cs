@@ -2,21 +2,16 @@
 using System.Windows.Forms;
 using Tekla.Structures.Dialog;
 
-namespace HelloWorld
+namespace ModelSharingPlugin
 {
-    public partial class HelloWorldForm : PluginFormBase
+    public partial class ModelSharingForm : PluginFormBase
     {
-        public HelloWorldForm()
+        public ModelSharingForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Hello world");
-        }
-
-        private void btnSqlite_Click(object sender, EventArgs e)
+        private void btnClick_Click(object sender, EventArgs e)
         {
             var connectionString = "Data Source=:memory:;Version=3;New=True";
             using (var connection = new System.Data.SQLite.SQLiteConnection(connectionString))
